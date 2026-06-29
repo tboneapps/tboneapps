@@ -97,13 +97,12 @@ img {
 .brand-mark {
   width: 34px;
   height: 34px;
-  display: grid;
-  place-items: center;
+  display: block;
   border: 1px solid rgba(212, 175, 55, 0.52);
   border-radius: 8px;
   background: var(--panel);
-  color: var(--accent-strong);
   box-shadow: 0 0 28px var(--gold-glow);
+  object-fit: cover;
 }
 
 .nav-links,
@@ -286,17 +285,14 @@ h3 {
 }
 
 .app-icon {
-  width: 54px;
-  height: 54px;
-  display: grid;
-  place-items: center;
+  width: 68px;
+  height: 68px;
+  display: block;
   border: 1px solid rgba(212, 175, 55, 0.45);
-  border-radius: 8px;
+  border-radius: 14px;
   background: #050505;
-  color: var(--accent-strong);
-  font-size: 1.35rem;
-  font-weight: 900;
   box-shadow: 0 0 24px var(--gold-glow);
+  object-fit: cover;
 }
 
 .app-card p,
@@ -331,6 +327,16 @@ h3 {
   align-items: center;
   flex-wrap: wrap;
   gap: 14px;
+}
+
+.detail-logo {
+  width: 96px;
+  height: 96px;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 18px;
+  background: #050505;
+  box-shadow: 0 0 30px var(--gold-glow);
+  object-fit: cover;
 }
 
 .detail-layout {
