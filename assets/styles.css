@@ -1,17 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Manrope:wght@400;500;700;800&display=swap');
+
 :root {
   color-scheme: dark;
-  --bg: #050505;
-  --bg-2: #0a0a0a;
-  --panel: #111111;
-  --panel-2: #171717;
-  --text: #ffffff;
+  --bg: #0c0906;
+  --bg-2: #191309;
+  --panel: #1e170e;
+  --panel-2: #221a0f;
+  --text: #f1ece0;
   --muted: #cfcfcf;
-  --soft: #9f9a8d;
+  --soft: #a89a83;
   --border: rgba(212, 175, 55, 0.25);
+  --hairline: rgba(212, 175, 55, 0.20);
   --accent: #d4af37;
   --accent-strong: #f5d76e;
   --gold-glow: rgba(212, 175, 55, 0.25);
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.46);
+  --font-display: 'Fraunces', 'Georgia', serif;
+  --font-body: 'Manrope', 'Segoe UI', sans-serif;
 }
 
 * {
@@ -26,10 +31,14 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: 0;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
 }
 
 body::selection {
@@ -104,15 +113,45 @@ img {
 }
 
 .brand-mark {
-  width: 34px;
-  height: 34px;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(212, 175, 55, 0.52);
-  border-radius: 8px;
-  background: #111111;
+  width: 26px;
+  height: 30px;
+  display: block;
   color: var(--accent-strong);
-  box-shadow: 0 0 28px var(--gold-glow);
+  flex-shrink: 0;
+}
+
+/* ---------- Starfield / light-trail hero effects ---------- */
+.starfield {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--accent-strong);
+  box-shadow: 0 0 6px 1px rgba(240, 215, 123, 0.6);
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.25; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star { animation: none; opacity: 0.7; }
+}
+
+.lighttrail {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.55;
+  pointer-events: none;
 }
 
 .nav-links {
@@ -493,6 +532,149 @@ h3 {
   margin: 18px 0 0;
   max-width: 720px;
   font-size: 1.12rem;
+}
+
+.page-hero.stars {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero.stars .page-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.feature-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6vw;
+  align-items: center;
+  padding-block: 64px;
+  border-top: 1px solid var(--hairline);
+}
+
+.feature-row:nth-of-type(even) .feature-art {
+  order: 2;
+}
+
+.feature-row .feature-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.feature-row h2 {
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  margin: 0 0 16px;
+}
+
+.feature-row p {
+  color: var(--soft);
+  font-size: 1.02rem;
+  max-width: 44ch;
+  margin: 0;
+}
+
+.feature-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-art svg {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+}
+
+@media (max-width: 760px) {
+  .feature-row {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+  .feature-row p { margin: 0 auto; }
+  .feature-row:nth-of-type(even) .feature-art { order: 0; }
+  .feature-row .feature-art svg { max-width: 200px; }
+}
+
+.pricing-strip {
+  text-align: center;
+  padding-block: 88px;
+  border-top: 1px solid var(--hairline);
+  background: linear-gradient(180deg, transparent, rgba(212, 175, 55, 0.04));
+}
+
+.pricing-strip h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin: 0 0 14px;
+}
+
+.pricing-strip > .container > p {
+  color: var(--soft);
+  max-width: 520px;
+  margin: 0 auto 32px;
+}
+
+.price-cards {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.price-card {
+  background: var(--panel);
+  border: 1px solid var(--hairline);
+  border-radius: 16px;
+  padding: 32px 28px;
+  width: 260px;
+  text-align: left;
+}
+
+.price-card .tier {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.price-card .amount {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+
+.price-card .amount span {
+  font-size: 0.9rem;
+  color: var(--soft);
+  font-family: var(--font-body);
+}
+
+.price-card ul {
+  list-style: none;
+  color: var(--soft);
+  font-size: 0.92rem;
+  margin: 0;
+  padding: 0;
+}
+
+.price-card li {
+  margin-bottom: 8px;
+  padding-left: 18px;
+  position: relative;
+}
+
+.price-card li::before {
+  content: "\2726";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.75rem;
 }
 
 .page-hero-image {
