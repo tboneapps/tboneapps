@@ -551,24 +551,17 @@ h3 {
   z-index: 2;
 }
 
-.page-hero.photo-hero {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
+.hero-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.page-hero.centered {
   text-align: center;
 }
 
-.page-hero.photo-hero .hero-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(180deg, rgba(12, 9, 6, 0.88) 0%, rgba(12, 9, 6, 0.93) 55%, var(--bg) 100%);
-}
-
-.page-hero.photo-hero .page-hero-inner {
-  position: relative;
-  z-index: 2;
+.page-hero.centered .page-hero-inner {
   margin-inline: auto;
 }
 
