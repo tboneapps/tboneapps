@@ -208,6 +208,17 @@ img {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .hero-image {
+    max-height: 480px;
+    object-fit: cover;
+  }
+
+  .hero-content {
+    padding-block: 32px 44px;
+  }
+}
+
 .section-kicker {
   margin: 0 0 12px;
   color: var(--accent);
