@@ -210,8 +210,11 @@ img {
 
 @media (min-width: 768px) {
   .hero-image {
-    max-height: 480px;
-    object-fit: cover;
+    max-height: 60vh;
+    width: auto;
+    max-width: 100%;
+    margin-inline: auto;
+    object-fit: contain;
   }
 
   .hero-content {
