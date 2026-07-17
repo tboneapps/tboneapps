@@ -200,11 +200,27 @@ img {
   background: #050505;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.18) 0%, rgba(212, 175, 55, 0.08) 35%, transparent 70%);
+  filter: blur(60px);
+  z-index: 0;
+  pointer-events: none;
+}
+
 body.home .page-stars {
   display: none;
 }
 
 .hero-image {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: auto;
   object-fit: contain;
