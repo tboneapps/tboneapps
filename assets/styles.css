@@ -1088,6 +1088,12 @@ h3 {
     padding-block: 40px 48px;
   }
 
+  .hero-image {
+    width: calc(100% - 28px);
+    margin-inline: 14px;
+    border-radius: 13px;
+  }
+
   h1 {
     font-size: 3.05rem;
   }
