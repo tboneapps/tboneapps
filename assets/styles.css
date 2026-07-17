@@ -188,6 +188,10 @@ img {
   background: #050505;
 }
 
+body.home .page-stars {
+  display: none;
+}
+
 .hero-image {
   width: 100%;
   height: auto;
@@ -215,10 +219,16 @@ img {
     max-width: 100%;
     margin-inline: auto;
     object-fit: contain;
+    border-radius: 20px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 60px rgba(212, 175, 55, 0.08);
   }
 
   .hero-content {
     padding-block: 32px 44px;
+  }
+
+  body.home .page-stars {
+    display: block;
   }
 }
 
