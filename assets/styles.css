@@ -197,6 +197,7 @@ img {
   position: relative;
   display: block;
   overflow: visible;
+  padding-top: 32px;
   border-bottom: 1px solid var(--border);
   background: #050505;
 }
