@@ -66,6 +66,18 @@ img {
   margin-inline: auto;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .skip-link {
   position: fixed;
   left: 16px;
@@ -208,7 +220,7 @@ body.home .page-stars {
   position: relative;
   z-index: 1;
   max-width: 860px;
-  padding-block: 52px 72px;
+  padding-block: 48px 56px;
   text-align: center;
 }
 
@@ -224,7 +236,7 @@ body.home .page-stars {
   }
 
   .hero-content {
-    padding-block: 32px 44px;
+    padding-block: 40px 48px;
   }
 
   body.home .page-stars {
@@ -1055,7 +1067,7 @@ h3 {
   }
 
   .hero-content {
-    padding-block: 42px 58px;
+    padding-block: 40px 48px;
   }
 
   h1 {
