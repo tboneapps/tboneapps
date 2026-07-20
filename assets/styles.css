@@ -327,6 +327,25 @@ h3 {
   list-style: none;
 }
 
+.about-section {
+  padding-block: 56px;
+}
+
+.about-content {
+  text-align: center;
+}
+
+.about-content h2 {
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.about-list {
+  max-width: 680px;
+  margin: 32px auto 0;
+  text-align: left;
+}
+
 .mission-list li {
   display: grid;
   grid-template-columns: 24px 1fr;
