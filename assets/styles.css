@@ -530,6 +530,38 @@ h3 {
   align-self: flex-start;
 }
 
+.apps-grid-single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+.app-card-square {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  min-height: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 32px 24px 28px;
+}
+
+.app-card-square .button {
+  align-self: center;
+}
+
+.app-card-icon {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
 .store-row {
   display: flex;
   gap: 16px;
@@ -1079,6 +1111,10 @@ h3 {
   .category-grid,
   .apps-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .apps-grid-single {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .split,
