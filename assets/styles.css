@@ -543,6 +543,21 @@ h3 {
   margin-inline: auto;
 }
 
+.apps-grid-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.coming-soon-label {
+  align-self: center;
+  color: var(--soft);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .app-card-square {
   position: relative;
   aspect-ratio: 1 / 1;
