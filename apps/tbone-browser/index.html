@@ -193,6 +193,18 @@
 
       .tb-feature.alt{background:var(--tb-bg-alt);}
 
+      /* ===== PRICING (page-scoped height/intro fix) ===== */
+      .price-cards .price-card{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+      }
+      .tb-price-intro{
+        margin:0 0 12px;
+        color:var(--soft);
+        font-size:0.9rem;
+      }
+
       @media (max-width:760px){
         .tb-feature-grid{grid-template-columns:1fr;gap:36px;}
         .tb-feature.reverse .tb-feature-grid{direction:ltr;}
@@ -407,6 +419,7 @@
             <div class="price-card">
               <div class="tier">Unlimited</div>
               <div class="amount">£10<span> / year</span></div>
+              <p class="tb-price-intro">Everything in Free, plus:</p>
               <ul>
                 <li>Full Commitment Timer</li>
                 <li>Friend / Parent Lock</li>
