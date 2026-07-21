@@ -193,57 +193,6 @@
 
       .tb-feature.alt{background:var(--tb-bg-alt);}
 
-      /* ===== PRICING ===== */
-      .tb-pricing{padding:100px 28px;text-align:center;}
-      .tb-pricing h2{font-size:clamp(1.7rem,4vw,2.4rem);margin:14px 0;}
-      .tb-pricing p.lead{color:var(--tb-text-dim);max-width:520px;margin:0 auto 48px;}
-      .tb-price-card{
-        max-width:380px;
-        margin:0 auto;
-        border:1px solid var(--tb-line-bright);
-        border-radius:20px;
-        padding:44px 36px;
-        background:radial-gradient(ellipse at 50% 0%, rgba(201,162,74,0.09), transparent 65%);
-      }
-      .tb-price-card .amount{
-        font-family:'Fraunces', Georgia, serif;
-        font-size:3rem;
-        color:var(--tb-gold-1);
-      }
-      .tb-price-card .amount span{font-size:1rem;color:var(--tb-text-dim);font-family:'Inter',sans-serif;}
-      .tb-price-list{
-        list-style:none;
-        padding:0;
-        margin:28px 0 32px;
-        text-align:left;
-        display:inline-block;
-      }
-      .tb-price-list li{
-        padding:8px 0 8px 26px;
-        position:relative;
-        color:var(--tb-text-dim);
-        font-size:0.95rem;
-      }
-      .tb-price-list li::before{
-        content:"✓";
-        position:absolute;
-        left:0;
-        color:var(--tb-gold-2);
-      }
-      .tb-cta-btn{
-        display:inline-block;
-        background:linear-gradient(180deg, var(--tb-gold-1), var(--tb-gold-2));
-        color:#161006;
-        font-weight:700;
-        padding:14px 36px;
-        border-radius:12px;
-        text-decoration:none;
-        font-size:0.98rem;
-        opacity:0.7;
-        cursor:default;
-        pointer-events:none;
-      }
-
       @media (max-width:760px){
         .tb-feature-grid{grid-template-columns:1fr;gap:36px;}
         .tb-feature.reverse .tb-feature-grid{direction:ltr;}
@@ -439,22 +388,30 @@
 
       <div class="comet-divider"></div>
 
-      <section class="tb-pricing">
-        <span class="tb-eyebrow">Pricing</span>
-        <h2>The perfect browser, at the cheapest price.</h2>
-        <p class="lead">One plan. Everything unlocked.</p>
-        <div class="tb-price-card">
-          <div class="amount">£4.99<span>/year</span></div>
-          <ul class="tb-price-list">
-            <li>Whitelist-only browsing</li>
-            <li>Commitment Timer</li>
-            <li>Friend / Parent Lock</li>
-            <li>Safe Browsing Mode</li>
-            <li>Daily Browser Timer</li>
-            <li>Backup &amp; Restore</li>
-          </ul>
-          <div>
-            <span class="tb-cta-btn" aria-disabled="true">Coming Soon</span>
+      <section class="pricing-strip">
+        <div class="container">
+          <h2>Cheapest and best, on purpose</h2>
+          <p>No trial gimmicks, no ads, no upsell games. Whitelist browsing, Safe Browsing Mode, and the Daily Browser Timer are free forever — pay only if you want the full Commitment Timer and Friend/Parent Lock.</p>
+          <div class="price-cards">
+            <div class="price-card">
+              <div class="tier">Free</div>
+              <div class="amount">£0<span> / forever</span></div>
+              <ul>
+                <li>Whitelist-only browsing</li>
+                <li>Safe Browsing Mode</li>
+                <li>Daily Browser Timer</li>
+                <li>Backup &amp; Restore</li>
+                <li>5-minute Commitment Timer test</li>
+              </ul>
+            </div>
+            <div class="price-card">
+              <div class="tier">Unlimited</div>
+              <div class="amount">£10<span> / year</span></div>
+              <ul>
+                <li>Full Commitment Timer</li>
+                <li>Friend / Parent Lock</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
