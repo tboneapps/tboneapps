@@ -620,6 +620,11 @@ h3 {
 .store-badge svg {
   width: 28px;
   height: 28px;
+  fill: var(--accent-strong);
+}
+
+.store-badge.coming-soon svg {
+  fill: var(--soft);
 }
 
 .store-badge.coming-soon {
