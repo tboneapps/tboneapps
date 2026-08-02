@@ -788,6 +788,20 @@ h3 {
   margin: 0;
 }
 
+.platform-note {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--soft);
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
 .feature-art {
   display: flex;
   align-items: center;
