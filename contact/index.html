@@ -15,7 +15,7 @@
     <meta name="description" content="Contact Tbone Apps — send a message about app support, privacy, or product enquiries.">
     <link rel="icon" type="image/png" href="../assets/logos/tbone-apps.png">
     <link rel="apple-touch-icon" href="../assets/logos/tbone-apps.png">
-    <link rel="stylesheet" href="../assets/styles.css?v=gold-20260826">
+    <link rel="stylesheet" href="../assets/styles.css?v=gold-20260826b">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -38,13 +38,19 @@
       <section class="page-hero compact">
         <div class="container page-hero-inner">
           <p class="section-kicker">Contact</p>
-          <h1>Tbone Apps</h1>
+          <h1>Get in touch</h1>
           <p>For app support, privacy questions, or product enquiries, send a message below.</p>
         </div>
       </section>
 
       <section class="section">
         <div class="container contact-panel">
+          <span class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="14" rx="2.4"/>
+              <path d="M3.5 6.2l8.5 6.6 8.5-6.6"/>
+            </svg>
+          </span>
           <form id="contact-form" class="contact-form" method="POST" action="https://formspree.io/f/xqpzrjrw">
             <div class="form-field">
               <label for="contact-name">Name</label>
@@ -53,6 +59,10 @@
             <div class="form-field">
               <label for="contact-email">Email</label>
               <input class="form-input" type="email" id="contact-email" name="email" autocomplete="email" required>
+            </div>
+            <div class="form-field">
+              <label for="contact-subject">Subject</label>
+              <input class="form-input" type="text" id="contact-subject" name="subject" autocomplete="off" required>
             </div>
             <div class="form-field">
               <label for="contact-message">Message</label>

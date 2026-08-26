@@ -1141,11 +1141,27 @@ h3 {
 }
 
 .contact-panel {
+  position: relative;
   max-width: 760px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.32);
+  border-radius: 20px;
   background: linear-gradient(145deg, rgba(212, 175, 55, 0.15), rgba(245, 215, 110, 0.05));
-  padding: 38px;
+  padding: 52px 48px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(212, 175, 55, 0.1), 0 0 46px rgba(212, 175, 55, 0.14);
+}
+
+.contact-panel::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 130%;
+  height: 140%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.32) 0%, rgba(212, 175, 55, 0.13) 40%, transparent 72%);
+  filter: blur(55px);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .contact-panel h2 {
@@ -1157,9 +1173,29 @@ h3 {
   margin: 14px 0 0;
 }
 
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 26px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(212, 175, 55, 0.09);
+  color: var(--accent-strong);
+  box-shadow: 0 0 26px rgba(212, 175, 55, 0.2);
+}
+
+.contact-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
 .contact-form {
+  position: relative;
   display: grid;
-  gap: 20px;
+  gap: 22px;
   max-width: 520px;
 }
 
@@ -1193,8 +1229,8 @@ h3 {
 
 .contact-form .form-input:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.18);
+  border-color: var(--accent-strong);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.22), 0 0 18px rgba(212, 175, 55, 0.25);
 }
 
 .contact-form .form-honeypot {
