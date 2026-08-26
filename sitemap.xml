@@ -16,6 +16,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://tboneapps.com/youtube-rss-reader/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tboneapps.com/privacy-policy/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
