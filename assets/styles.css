@@ -1157,6 +1157,84 @@ h3 {
   margin: 14px 0 0;
 }
 
+.contact-form {
+  display: grid;
+  gap: 20px;
+  max-width: 520px;
+}
+
+.contact-form .form-field {
+  display: grid;
+  gap: 8px;
+}
+
+.contact-form label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+
+.contact-form .form-input {
+  width: 100%;
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  background: var(--panel-2);
+  color: var(--text);
+  font: inherit;
+  padding: 12px 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form textarea.form-input {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact-form .form-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.18);
+}
+
+.contact-form .form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.contact-form .button {
+  justify-self: start;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form-status {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.contact-form-status.error {
+  color: #e08a8a;
+}
+
+.contact-thanks {
+  display: none;
+}
+
+.contact-thanks h2 {
+  font-size: 1.6rem;
+  margin: 0 0 10px;
+}
+
+.contact-thanks p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .site-footer {
   border-top: 1px solid var(--border);
   background: #050505;

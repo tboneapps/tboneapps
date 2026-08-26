@@ -12,10 +12,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact | Tbone Apps</title>
-    <meta name="description" content="Contact Tbone Apps by email.">
+    <meta name="description" content="Contact Tbone Apps — send a message about app support, privacy, or product enquiries.">
     <link rel="icon" type="image/png" href="../assets/logos/tbone-apps.png">
     <link rel="apple-touch-icon" href="../assets/logos/tbone-apps.png">
-    <link rel="stylesheet" href="../assets/styles.css?v=gold-20260802c">
+    <link rel="stylesheet" href="../assets/styles.css?v=gold-20260826">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -39,16 +39,37 @@
         <div class="container page-hero-inner">
           <p class="section-kicker">Contact</p>
           <h1>Tbone Apps</h1>
-          <p>For app support, privacy questions, or product enquiries, contact Tbone Apps by email.</p>
+          <p>For app support, privacy questions, or product enquiries, send a message below.</p>
         </div>
       </section>
 
       <section class="section">
         <div class="container contact-panel">
-          <div>
-            <p class="section-kicker">Email</p>
-            <h2><a href="mailto:tboneapps@outlook.com">tboneapps@outlook.com</a></h2>
-            <p>Use this address for questions about Focus Feed, privacy, or support.</p>
+          <form id="contact-form" class="contact-form" method="POST" action="https://formspree.io/f/xqpzrjrw">
+            <div class="form-field">
+              <label for="contact-name">Name</label>
+              <input class="form-input" type="text" id="contact-name" name="name" autocomplete="name" required>
+            </div>
+            <div class="form-field">
+              <label for="contact-email">Email</label>
+              <input class="form-input" type="email" id="contact-email" name="email" autocomplete="email" required>
+            </div>
+            <div class="form-field">
+              <label for="contact-message">Message</label>
+              <textarea class="form-input" id="contact-message" name="message" required></textarea>
+            </div>
+            <div class="form-field form-honeypot" aria-hidden="true">
+              <label for="contact-gotcha">Leave this field empty</label>
+              <input type="text" id="contact-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+            </div>
+            <button class="button primary" type="submit">Submit</button>
+            <p class="contact-form-status" id="contact-form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="contact-thanks" id="contact-thanks">
+            <p class="section-kicker">Thank you</p>
+            <h2>Message sent</h2>
+            <p>Thanks for reaching out — we'll get back to you as soon as we can.</p>
           </div>
         </div>
       </section>
@@ -70,5 +91,44 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      (function () {
+        var form = document.getElementById('contact-form');
+        var status = document.getElementById('contact-form-status');
+        var thanks = document.getElementById('contact-thanks');
+
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          status.textContent = 'Sending…';
+          status.classList.remove('error');
+
+          fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          }).then(function (response) {
+            if (response.ok) {
+              form.style.display = 'none';
+              thanks.style.display = 'block';
+            } else {
+              response.json().then(function (data) {
+                var message = (data && data.errors && data.errors.length)
+                  ? data.errors.map(function (e) { return e.message; }).join(', ')
+                  : 'Something went wrong. Please try again or email tboneapps@outlook.com directly.';
+                status.textContent = message;
+                status.classList.add('error');
+              }).catch(function () {
+                status.textContent = 'Something went wrong. Please try again or email tboneapps@outlook.com directly.';
+                status.classList.add('error');
+              });
+            }
+          }).catch(function () {
+            status.textContent = 'Something went wrong. Please check your connection and try again.';
+            status.classList.add('error');
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
