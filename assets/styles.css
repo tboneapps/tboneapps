@@ -719,6 +719,15 @@ h3 {
   margin-inline: auto;
 }
 
+.page-hero.dark-stars {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.page-hero.dark-stars.compact .page-hero-inner {
+  padding-block: 100px 92px;
+}
+
 /* ---------- Gentle page-wide starfield ---------- */
 .page-stars {
   position: fixed;
