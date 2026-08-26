@@ -724,6 +724,20 @@ h3 {
   border-bottom: 1px solid var(--border);
 }
 
+.page-hero.dark-stars .section-kicker {
+  margin-bottom: 6px;
+}
+
+.page-hero.dark-stars h1 {
+  margin-bottom: 8px;
+}
+
+.page-hero.dark-stars p {
+  margin-top: 0;
+  max-width: 560px;
+  margin-inline: auto;
+}
+
 .page-hero.dark-stars.compact .page-hero-inner {
   padding-block: 100px 92px;
 }
