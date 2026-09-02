@@ -344,7 +344,7 @@ h3 {
   max-width: 1040px;
   margin: 32px auto 0;
   text-align: left;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
 
