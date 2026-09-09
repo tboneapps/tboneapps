@@ -86,6 +86,13 @@
       .faq-item p { margin: 12px 0 0; }
       .vidtag-feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 900px; margin-inline: auto; }
       .positioning-note { max-width: 760px; margin: 0 auto; text-align: center; color: var(--muted, #a89a83); }
+      .vidtag-screens { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; max-width: 620px; margin: 0 auto; padding-block: 40px; }
+      .vidtag-screens img { width: 100%; height: auto; display: block; border-radius: 20px; border: 1px solid var(--hairline); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4); }
+      .feature-row-single { grid-template-columns: 1fr; max-width: 700px; margin-inline: auto; text-align: center; }
+      .feature-row-single p { margin: 0 auto; }
+      @media (max-width: 640px) {
+        .vidtag-screens { grid-template-columns: 1fr; max-width: 300px; gap: 24px; }
+      }
     </style>
   </head>
   <body>
@@ -125,19 +132,17 @@
         </div>
       </section>
 
-      <div class="hero-banner">
+      <div class="vidtag-screens container">
         <img src="../../assets/vidtag/vt-hero-one-tap.png" alt="VidTag video tag editor screenshot showing cover art upload on Android with the headline One Tap. That's It.">
+        <img src="../../assets/vidtag/vt-easy-reliable.png" alt="VidTag video metadata editor screenshot showing title, year, and artwork fields for embedding cover art into a video file on Android, headline Easy and Reliable.">
       </div>
 
       <div id="features">
-        <div class="feature-row container">
+        <div class="feature-row feature-row-single container">
           <div class="feature-text">
             <div class="feature-eyebrow">Add Cover Art in Seconds</div>
             <h2>Add Cover Art to Videos in a Couple of Taps</h2>
             <p>Pick any video, choose a photo from your gallery, and VidTag embeds it as the file's cover art — the same artwork video players and music apps show when the file has no thumbnail. No cropping tools to fight, no exporting to a separate app. It's the fastest way to add artwork to an MP4 on Android.</p>
-          </div>
-          <div class="feature-art">
-            <img src="../../assets/vidtag/vt-easy-reliable.png" alt="VidTag video metadata editor screenshot showing title, year, and artwork fields for embedding cover art into a video file on Android, headline Easy and Reliable.">
           </div>
         </div>
       </div>
