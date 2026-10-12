@@ -62,17 +62,6 @@
       .ff-hero .ff-lede { margin: 16px auto 0; }
       html[data-platform="ios"] .ff-hero .store-badge[data-store="appstore"] { order: -1; }
 
-      @media (min-width: 768px) {
-        html[data-platform="ios"] .ff-hero .store-badge[data-store="appstore"],
-        html[data-platform="android"] .ff-hero .store-badge[data-store="googleplay"] {
-          width: 224px;
-          height: 132px;
-          border-color: var(--accent);
-          font-size: 1.05rem;
-        }
-        .ff-hero .store-row { align-items: center; }
-      }
-
       @media (max-width: 767px) {
         .ff-mobile-only { display: block; }
         .ff-desktop-only { display: none; }
@@ -84,23 +73,11 @@
         .ff-hero h1 { font-size: 2.05rem; line-height: 1.12; }
         .ff-hero .ff-tagline { margin: 12px auto 0; font-size: 1rem; }
 
-        .ff-hero .store-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 22px; }
-        .ff-hero .store-badge { width: auto; height: 52px; flex-direction: row; gap: 8px; font-size: 0.95rem; }
+        .ff-hero .store-row { display: grid; grid-template-columns: 1fr; gap: 8px; margin-top: 20px; }
+        .ff-hero .store-badge { width: auto; height: 48px; flex-direction: row; gap: 8px; font-size: 0.95rem; }
         .ff-hero .store-badge svg { width: 22px; height: 22px; }
         .ff-hero .store-badge .badge-sub { display: none; }
 
-        html[data-platform="ios"] .ff-hero .store-badge[data-store="appstore"],
-        html:not([data-platform="ios"]) .ff-hero .store-badge[data-store="googleplay"] {
-          grid-column: 1 / -1;
-          height: 64px;
-          font-size: 1.1rem;
-          color: #050505;
-          border-color: transparent;
-          background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-          box-shadow: 0 14px 32px var(--gold-glow);
-        }
-        html[data-platform="ios"] .ff-hero .store-badge[data-store="appstore"] svg,
-        html:not([data-platform="ios"]) .ff-hero .store-badge[data-store="googleplay"] svg { width: 26px; height: 26px; fill: #050505; }
 
         .ff-hero .ff-phone { margin-top: 30px; }
         .ff-phone img { display: block; width: min(240px, 64vw); height: auto; margin: 0 auto; border-radius: 22px; border: 1px solid var(--hairline); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 40px var(--gold-glow); }
@@ -146,7 +123,7 @@
           </div>
           <p class="section-kicker ff-desktop-only">Focus Feed</p>
           <h1>Watch YouTube without the algorithm.</h1>
-          <p class="ff-tagline ff-mobile-only">Just the channels you chose, in the order they posted.</p>
+          <p class="ff-tagline ff-mobile-only">No ads. No algorithm. Just the channels you chose, in the order they posted.</p>
 
           <div class="store-row" aria-label="Download Focus Feed">
             <a class="store-badge" data-store="googleplay" href="https://play.google.com/store/apps/details?id=com.focusfeed.app&amp;referrer=utm_source%3Dtiktok%26utm_medium%3Dpaid%26utm_campaign%3Dfocusfeed_oct" target="_blank" rel="noopener">
