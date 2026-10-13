@@ -40,11 +40,29 @@
       .positioning-note { max-width: 760px; margin: 0 auto; text-align: center; color: var(--muted, #a89a83); }
       .vidtag-hero-frame { padding: 56px 28px 0; }
       .vidtag-hero-frame-inner { max-width: 1120px; margin: 0 auto; border: 1px solid var(--hairline); border-radius: 24px; overflow: hidden; background: radial-gradient(ellipse at 50% 0%, rgba(216, 172, 58, 0.1), transparent 60%); box-shadow: 0 0 60px rgba(216, 172, 58, 0.08); }
-      .vidtag-hero-frame-inner img { width: 100%; display: block; }
+      .vidtag-hero-frame-inner img { width: 100%; height: auto; display: block; }
       .vidtag-screens { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; max-width: 620px; margin: 0 auto; padding-block: 40px; }
       .vidtag-screens img { width: 100%; height: auto; display: block; border-radius: 20px; border: 1px solid var(--hairline); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4); }
       .feature-row-single { grid-template-columns: 1fr; max-width: 700px; margin-inline: auto; text-align: center; }
       .feature-row-single p { margin: 0 auto; }
+      .vt-mobile-only { display: none; }
+      .vt-hero .vt-lede { margin: 32px auto 0; }
+      @media (max-width: 767px) {
+        .vt-mobile-only { display: block; }
+        .vt-desktop-only { display: none; }
+        .vt-hero .page-hero-inner { padding-block: 24px 28px; }
+        .vt-hero .vt-brandrow { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 16px; }
+        .vt-brandrow img { width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 0 28px var(--gold-glow); }
+        .vt-brandrow span { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: #fff; }
+        .vt-hero h1 { font-size: 1.75rem; line-height: 1.14; }
+        .vt-hero .vt-tagline { margin: 12px auto 0; font-size: 1rem; }
+        .vt-hero .store-row { display: grid; grid-template-columns: 1fr; gap: 8px; margin-top: 20px; }
+        .vt-hero .store-badge { width: auto; height: 48px; flex-direction: row; gap: 8px; font-size: 0.95rem; }
+        .vt-hero .store-badge svg { width: 22px; height: 22px; }
+        .vt-hero .store-badge .badge-sub { display: none; }
+        .vt-hero .vt-lede { margin: 28px auto 0; font-size: 1rem; }
+        .vidtag-screens { padding-block: 8px 24px; }
+      }
       @media (max-width: 640px) {
         .vidtag-screens { grid-template-columns: 1fr; max-width: 300px; gap: 24px; }
       }
@@ -70,17 +88,24 @@
     </header>
 
     <main id="main">
-      <div class="vidtag-hero-frame">
+      <div class="vidtag-hero-frame vt-desktop-only">
         <div class="vidtag-hero-frame-inner">
-          <img src="../../assets/vidtag/vt-banner.png" alt="VidTag video tag editor banner — add cover art and title tags to your videos on Android">
+          <picture>
+            <source media="(min-width: 768px)" srcset="../../assets/vidtag/vt-banner.webp">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="1600" height="781" fetchpriority="high" decoding="async" alt="VidTag video tag editor banner — add cover art and title tags to your videos on Android">
+          </picture>
         </div>
       </div>
 
-      <section class="page-hero centered">
+      <section class="page-hero centered vt-hero">
         <div class="container page-hero-inner">
-          <p class="section-kicker">VidTag</p>
+          <div class="vt-brandrow vt-mobile-only">
+            <img src="../../assets/logos/vidtag.webp" width="160" height="160" alt="" aria-hidden="true">
+            <span>VidTag</span>
+          </div>
+          <p class="section-kicker vt-desktop-only">VidTag</p>
           <h1>A Video Tag Editor for Android — Add Cover Art to Videos in Seconds</h1>
-          <p>VidTag embeds title and cover art metadata straight into your video files on Android — no computer, no watermark, no account. Most video metadata editors on the Play Store are ad-heavy or unreliable; VidTag is built to just work, every time.</p>
+          <p class="vt-tagline vt-mobile-only">Add cover art in a couple of taps. No watermark, works offline.</p>
 
           <div class="store-row" aria-label="Download VidTag">
             <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.tbone.tagreel" target="_blank" rel="noopener">
@@ -89,12 +114,14 @@
               <span class="badge-sub">Available now</span>
             </a>
           </div>
+
+          <p class="vt-lede">VidTag embeds title and cover art metadata straight into your video files on Android — no computer, no watermark, no account. Most video metadata editors on the Play Store are ad-heavy or unreliable; VidTag is built to just work, every time.</p>
         </div>
       </section>
 
       <div class="vidtag-screens container">
-        <img src="../../assets/vidtag/vt-hero-one-tap.png" alt="VidTag video tag editor screenshot showing cover art upload on Android with the headline One Tap. That's It.">
-        <img src="../../assets/vidtag/vt-easy-reliable.png" alt="VidTag video metadata editor screenshot showing title, year, and artwork fields for embedding cover art into a video file on Android, headline Easy and Reliable.">
+        <img src="../../assets/vidtag/vt-hero-one-tap.png" width="1080" height="2340" loading="lazy" decoding="async" alt="VidTag video tag editor screenshot showing cover art upload on Android with the headline One Tap. That's It.">
+        <img src="../../assets/vidtag/vt-easy-reliable.png" width="1080" height="2340" loading="lazy" decoding="async" alt="VidTag video metadata editor screenshot showing title, year, and artwork fields for embedding cover art into a video file on Android, headline Easy and Reliable.">
       </div>
 
       <div id="features">
