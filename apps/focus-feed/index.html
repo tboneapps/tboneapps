@@ -58,6 +58,9 @@
     </script>
     <style>
       .ff-mobile-only { display: none; }
+      .ff-s { display: block; text-wrap: balance; }
+      .ff-hero .page-hero-inner { max-width: 1040px; }
+      .ff-hero h1 { font-size: clamp(1.5rem, 3.6vw, 2.6rem); }
       .ff-hero .ff-lead { font-size: clamp(1.4rem, 2.4vw, 1.8rem); max-width: none; margin: 44px auto 0; text-wrap: balance; }
       .ff-hero .ff-lede { margin: 16px auto 0; }
       html[data-platform="ios"] .ff-hero .store-badge[data-store="appstore"] { order: -1; }
@@ -70,7 +73,7 @@
         .ff-hero .ff-brandrow { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 16px; }
         .ff-brandrow img { width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 0 28px var(--gold-glow); }
         .ff-brandrow span { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: #fff; }
-        .ff-hero h1 { font-size: 2.05rem; line-height: 1.12; }
+        .ff-hero h1 { font-size: clamp(1.2rem, 6.1vw, 1.9rem); line-height: 1.16; }
         .ff-hero .ff-tagline { margin: 12px auto 0; font-size: 1rem; }
 
         .ff-hero .store-row { display: grid; grid-template-columns: 1fr; gap: 8px; margin-top: 20px; }
@@ -122,7 +125,7 @@
             <span>Focus Feed</span>
           </div>
           <p class="section-kicker ff-desktop-only">Focus Feed</p>
-          <h1>Watch YouTube without the algorithm.</h1>
+          <h1><span class="ff-s">Watch YouTube without the algorithm.</span></h1>
           <p class="ff-tagline ff-mobile-only">No ads. No algorithm. Just the channels you chose, in the order they posted.</p>
 
           <div class="store-row" aria-label="Download Focus Feed">
@@ -150,7 +153,7 @@
             </picture>
           </div>
 
-          <h2 class="ff-lead">Watch what you <em>chose</em> to watch. Nothing else.</h2>
+          <h2 class="ff-lead"><span class="ff-s">Watch what you <em>chose</em> to watch.</span><span class="ff-s">Nothing else.</span></h2>
           <p class="ff-lede">Focus Feed follows your favourite YouTube channels through their own open feeds — no algorithm deciding what's next, no autoplay dragging you sideways, no recommended rabbit holes. Just the channels you follow, in the order they posted.</p>
         </div>
       </section>
