@@ -41,6 +41,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://tboneapps.com/privacy-policy/vidtag/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://tboneapps.com/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
