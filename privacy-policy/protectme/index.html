@@ -32,7 +32,7 @@
         <div class="container page-hero-inner">
           <p class="section-kicker">Privacy Policy</p>
           <h1>ProtectMe Privacy Policy</h1>
-          <p class="page-copy">Last updated: 22 November 2026</p>
+          <p class="page-copy">Last updated: 25 November 2026 &middot; Covers ProtectMe for Android, ProtectMe for Windows, and ProtectMe Companion Browser Extension</p>
         </div>
       </section>
 
@@ -40,7 +40,7 @@
         <div class="container simple-content">
           <section>
             <h2>Summary</h2>
-            <p>ProtectMe is a self-control app blocker. Everything it does happens on your own phone. We do not run a server that collects your data, there are no accounts, and we do not show ads, use analytics, sell your data or track you.</p>
+            <p>ProtectMe is a self-control app and website blocker across Android, Windows, and desktop browsers. Everything it does happens locally on your own device. We do not run a server that collects your personal data, there are no accounts, and we do not show ads, use analytics, sell your data or track you.</p>
           </section>
 
           <section>
@@ -48,8 +48,11 @@
             <p>ProtectMe is published by Tbone Apps. Contact: <a href="mailto:tboneapps@outlook.com">tboneapps@outlook.com</a></p>
           </section>
 
+          <hr style="border:0;border-top:1px solid rgba(212,175,55,0.28);margin:28px 0;">
+
           <section>
-            <h2>Accessibility Service</h2>
+            <h2>1. ProtectMe for Android (Mobile)</h2>
+            <h3>Accessibility Service</h3>
             <p>ProtectMe uses Android's Accessibility Service API so it can do the job you set it up for:</p>
             <ul>
               <li>See which app is open, so it can block the apps you chose.</li>
@@ -60,12 +63,12 @@
           </section>
 
           <section>
-            <h2>VPN (Apps offline)</h2>
+            <h3>VPN (Apps offline)</h3>
             <p>If you put apps in Apps offline, ProtectMe starts a local VPN on your device to cut those apps off from the internet. The VPN runs entirely on your phone. It does not send your traffic to any server, and it does not inspect, record or share your browsing or app data. Apps you have not chosen are not affected.</p>
           </section>
 
           <section>
-            <h2>Information the app uses</h2>
+            <h3>Information the Android app uses</h3>
             <ul>
               <li><strong>Your app list.</strong> ProtectMe reads the list of installed apps so you can choose which to block or take offline. Your choices are saved on your device.</li>
               <li><strong>Unlock keys.</strong> If you add a password, QR code, barcode or NFC tag as an unlock key, it is stored securely on your device so ProtectMe can check it. It is never sent to us.</li>
@@ -75,6 +78,32 @@
               <li><strong>Schedules and settings.</strong> Your protection schedule and other settings are saved on your device.</li>
             </ul>
           </section>
+
+          <hr style="border:0;border-top:1px solid rgba(212,175,55,0.28);margin:28px 0;">
+
+          <section>
+            <h2>2. ProtectMe for Windows (Desktop)</h2>
+            <ul>
+              <li><strong>Local Windows Service.</strong> ProtectMe runs a local background Windows Service (<code>ProtectMeService</code>) solely to close blocked applications, enforce your chosen schedules, and prevent unauthorized uninstallation while protection is active.</li>
+              <li><strong>Local Website Whitelist Proxy &amp; Browser Policies.</strong> When Website Protection, Safe Browsing, or Block Image &amp; Video Search is enabled, ProtectMe routes traffic through a local loopback proxy (<code>127.0.0.1</code>) and applies local Windows browser policies. No browsing history or traffic is ever sent to Tbone Apps or any third party.</li>
+              <li><strong>Master Password &amp; Configuration.</strong> Your Master Password is stored locally on your PC as a salted PBKDF2-SHA256 hash in <code>C:\ProgramData\ProtectMe\config.json</code>. It is never transmitted off your device.</li>
+              <li><strong>Optional License Key Verification.</strong> If you purchase Websites Pro via Gumroad, ProtectMe sends only your license key to Gumroad's verification API (<code>api.gumroad.com</code>) to confirm validity. No account is required.</li>
+              <li><strong>Update Checks.</strong> On startup, ProtectMe checks GitHub Releases to notify you when a newer version is available.</li>
+            </ul>
+          </section>
+
+          <hr style="border:0;border-top:1px solid rgba(212,175,55,0.28);margin:28px 0;">
+
+          <section>
+            <h2>3. ProtectMe Companion Browser Extension</h2>
+            <p>The ProtectMe Companion extension (for Chrome, Brave, Edge, and compatible Chromium browsers) works alongside ProtectMe for Windows:</p>
+            <ul>
+              <li><strong>Single Purpose.</strong> Applies local CSS styling to render images and videos as solid black boxes and pauses video playback while ProtectMe Safe Browsing is active.</li>
+              <li><strong>Zero Data Collection.</strong> The extension does not collect, store, log, sell, or transmit any browsing history, webpage content, personal information, or analytics data. Everything runs 100% locally in your browser.</li>
+            </ul>
+          </section>
+
+          <hr style="border:0;border-top:1px solid rgba(212,175,55,0.28);margin:28px 0;">
 
           <section>
             <h2>What we do not do</h2>
